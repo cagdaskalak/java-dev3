@@ -1,0 +1,57 @@
+package vkehesaplama;
+
+import java.util.Scanner;
+
+public class vke {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner (System.in);
+		
+		double kilo,boy,sonuc;
+		System.out.println("Kilonuzu KG Cinsinden Giriniz.");
+		kilo = scan.nextDouble();
+		
+		System.out.println("Boyunuzu METRE Cinsinden Giriniz. Örnek(1,75)");
+		boy = scan.nextDouble();
+		
+		sonuc = kilo/ (boy*boy);
+		
+		System.out.println("Vücut Kitle Endeksiniz:" + sonuc);
+		
+		if (sonuc<=18.4) {
+			System.out.println("Vücut Kitle Endeksinize Göre Durumunuz: Zayıf");
+			System.out.println("Uyarı: Uzunluğunuza göre uygun ağırlıkta olmadığınızı, zayıf olduğunuzu gösterir. Zayıflık, bazı hastalıklar için risk oluşturan ve istenmeyen bir durumdur. Boyunuza uygun ağırlığa erişmeniz için yeterli ve dengeli beslenmeli, beslenme alışkanlıklarınızı geliştirmeye özen göstermelisiniz.");
+					
+		}
+		
+		else if (sonuc>=18.5 && sonuc<=24.9) {
+			System.out.println("Vücut Kitle Endeksinize Göre Durumunuz: Normal");
+			System.out.println("Uyarı: Uzunluğunuza göre uygun ağırlıkta olduğunuzu gösterir. Yeterli ve dengeli beslenerek ve düzenli fiziksel aktivite yaparak bu ağırlığınızı korumaya özen gösteriniz.");
+		}
+		
+		else if (sonuc>=25.0 && sonuc<=29.9) {
+			System.out.println("Vücut Kitle Endeksinize Göre Durumunuz: Fazla Kilolu");
+			System.out.println("Uyarı: Boyunuza göre vücut ağırlığınızın fazla olduğunu gösterir. Fazla kilolu olma durumu gerekli önlemler alınmadığı takdirde pek çok hastalık için risk faktörü olan obeziteye (şişmanlık) yol açar.");
+		}
+		
+		else if (sonuc>=30.0 && sonuc<=34.9) {
+			System.out.println("Vücut Kitle Endeksinize Göre Durumunuz: Şişman (Obez) - I. Sınıf");
+			System.out.println("Uyarı: Boyunuza göre vücut ağırlığınızın fazla olduğunu bir başka deyişle şişman olduğunuzun bir göstergesidir. Şişmanlık, kalp-damar hastalıkları, diyabet, hipertansiyon v.b. kronik hastalıklar için risk faktörüdür. Bir sağlık kuruluşuna başvurarak hekim / diyetisyen kontrolünde zayıflayarak normal ağırlığa inmeniz sağlığınız açısından çok önemlidir. Lütfen, sağlık kuruluşuna başvurunuz.");
+		}
+		
+		else if (sonuc>=35.0 && sonuc<=44.9) {
+			System.out.println("Vücut Kitle Endeksinize Göre Durumunuz: Şişman (Obez) - II. Sınıf");
+			System.out.println("Uyarı: Uzunluğunuza göre vücut ağırlığınızın fazla olduğunu bir başka deyişle şişman olduğunuzun bir göstergesidir. Şişmanlık, kalp-damar hastalıkları, diyabet, hipertansiyon v.b. kronik hastalıklar için risk faktörüdür. Bir sağlık kuruluşuna başvurarak hekim / diyetisyen kontrolünde zayıflayarak normal ağırlığa inmeniz sağlığınız açısından çok önemlidir. Lütfen, sağlık kuruluşuna başvurunuz.");
+		}
+		
+		else if (sonuc>=45.0) {
+			System.out.println("Vücut Kitle Endeksinize Göre Durumunuz: Aşırı Şişman (Aşırı Obez) - III. Sınıf");
+			System.out.println("Uyarı: Boyunuza göre vücut ağırlığınızın fazla olduğunu bir başka deyişle şişman olduğunuzun bir göstergesidir. Şişmanlık, kalp-damar hastalıkları, diyabet, hipertansiyon v.b. kronik hastalıklar için risk faktörüdür. Bir sağlık kuruluşuna başvurarak hekim / diyetisyen kontrolünde zayıflayarak normal ağırlığa inmeniz sağlığınız açısından çok önemlidir. Lütfen, sağlık kuruluşuna başvurunuz.");
+		}
+		
+		else {
+			System.out.println("Hata Oluştu.");
+		}
+	}
+
+}
